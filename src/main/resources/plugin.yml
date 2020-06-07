@@ -1,0 +1,27 @@
+name: Royals
+main: net.undergroundantics.Royals.Royals
+version: 1.0
+author: Dxyze
+commands:
+  bankteller:
+      description: Create a bank teller.
+      usage: /<command>
+      permission: royals.bankteller.create
+      permission-message: You don't have <permission>
+permissions:
+  royals.*:
+    description: Gives access to all Royals commands
+    children:
+      royals.bankteller: true
+  royals.bankteller.*:
+    description: Gives access to all bank teller commands
+    children:
+      royals.bankteller.create: true
+      royals.bankteller.use: true
+  royals.bankteller.create:
+    description: Allows you to create bank tellers
+    default: op
+  royals.bankteller.use:
+    description: Allows you to interact with bank tellers
+    default: true
+depend: [Vault, Citizens, Essentials]
