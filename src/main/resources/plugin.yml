@@ -1,13 +1,14 @@
 name: Royals
 main: net.undergroundantics.Royals.Royals
-version: 1.0
+version: 2.0
 author: Dxyze
+api-version: 1.20
 commands:
   bankteller:
-      description: Create a bank teller.
-      usage: /<command>
-      permission: royals.bankteller.create
-      permission-message: You don't have <permission>
+    description: Create a bank teller.
+    usage: /<command>
+    permission: royals.bankteller.create
+    permission-message: You don't have <permission>
 permissions:
   royals.*:
     description: Gives access to all Royals commands
